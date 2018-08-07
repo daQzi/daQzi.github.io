@@ -46,11 +46,11 @@
   </entry>
   
   <entry>
-    <title>hexo博客常用插件及教程</title>
+    <title>spring boot的启动流程</title>
     <link href="https://daqzi.github.io/2017/1.html"/>
     <id>https://daqzi.github.io/2017/1.html</id>
     <published>2017-07-31T12:29:38.000Z</published>
-    <updated>2018-08-07T10:38:06.257Z</updated>
+    <updated>2018-08-07T10:39:10.845Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="JSON-对于泛型中关联转换"><a href="#JSON-对于泛型中关联转换" class="headerlink" title="JSON 对于泛型中关联转换"></a>JSON 对于泛型中关联转换</h2><ul><li>传递转换</li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSON.parseObject(response, new TypeReference&lt;Result&lt;CustResult&gt;&gt;()&#123;&#125;);</span><br></pre></td></tr></table></figure></li></ul><hr><h2 id="TypeReference"><a href="#TypeReference" class="headerlink" title="TypeReference"></a>TypeReference<t></t></h2><hr><h2 id="spring-boot的启动流程"><a href="#spring-boot的启动流程" class="headerlink" title="spring boot的启动流程"></a>spring boot的启动流程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new SpringApplication(sources)</span><br></pre></td></tr></table></figure><p>以上过程做了以下事情：</p><ul><li>在启动SpringBoot的过程中创建SpringApplication的实例，</li><li>并调用它的初始化方法来判断当前环境是不是web环境，</li><li>获取主应用类，存放传入的sources类，</li><li>加载org.springframework.context.ApplicationContextInitializer和org.springframework.context.ApplicationListener类型的对象。</li></ul><p>调用run()方法，做了以下事情</p><ul><li>启用监控：StopWatch主要是监控启动过程，统计启动时间，检测应用是否已经启动或者停止。</li><li>启动spring的监听事件</li><li>解析参数</li><li>配置环境变量</li><li>创建上下文对象</li></ul>]]></content>
     
