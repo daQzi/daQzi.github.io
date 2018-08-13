@@ -100,13 +100,13 @@
   </entry>
   
   <entry>
-    <title>json泛型的关联转换</title>
-    <link href="https://daqzi.github.io/2017/json%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%85%B3%E8%81%94%E8%BD%AC%E6%8D%A2.html"/>
-    <id>https://daqzi.github.io/2017/json泛型的关联转换.html</id>
+    <title>spring启动流程</title>
+    <link href="https://daqzi.github.io/2017/spring%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.html"/>
+    <id>https://daqzi.github.io/2017/spring的启动流程.html</id>
     <published>2017-07-31T12:29:38.000Z</published>
-    <updated>2018-08-13T07:55:28.541Z</updated>
+    <updated>2018-08-13T08:01:08.873Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="JSON-对于泛型中关联转换"><a href="#JSON-对于泛型中关联转换" class="headerlink" title="JSON 对于泛型中关联转换"></a>JSON 对于泛型中关联转换</h4><ul><li>传递转换</li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSON.parseObject(response, new TypeReference&lt;Result&lt;CustResult&gt;&gt;()&#123;&#125;);</span><br></pre></td></tr></table></figure></li></ul><hr><h4 id="TypeReference"><a href="#TypeReference" class="headerlink" title="TypeReference"></a>TypeReference<t></t></h4><hr>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="spring-boot的启动流程"><a href="#spring-boot的启动流程" class="headerlink" title="spring boot的启动流程"></a>spring boot的启动流程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new SpringApplication(sources)</span><br></pre></td></tr></table></figure><p>以上过程做了以下事情：</p><ul><li>在启动SpringBoot的过程中创建SpringApplication的实例，</li><li>并调用它的初始化方法来判断当前环境是不是web环境，</li><li>获取主应用类，存放传入的sources类，</li><li>加载org.springframework.context.ApplicationContextInitializer和org.springframework.context.ApplicationListener类型的对象。</li></ul><p>调用run()方法，做了以下事情</p><ul><li>启用监控：StopWatch主要是监控启动过程，统计启动时间，检测应用是否已经启动或者停止。</li><li>启动spring的监听事件</li><li>解析参数</li><li>配置环境变量</li><li>创建上下文对象</li></ul>]]></content>
     
     <summary type="html">
     
@@ -117,21 +117,21 @@
     
     </summary>
     
-      <category term="json" scheme="https://daqzi.github.io/categories/json/"/>
+      <category term="spring" scheme="https://daqzi.github.io/categories/spring/"/>
     
     
-      <category term="json" scheme="https://daqzi.github.io/tags/json/"/>
+      <category term="spring" scheme="https://daqzi.github.io/tags/spring/"/>
     
   </entry>
   
   <entry>
-    <title>json���͵Ĺ���ת��</title>
-    <link href="https://daqzi.github.io/2017/spring%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.html"/>
-    <id>https://daqzi.github.io/2017/spring的启动流程.html</id>
+    <title>json泛型的关联转换</title>
+    <link href="https://daqzi.github.io/2017/json%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%85%B3%E8%81%94%E8%BD%AC%E6%8D%A2.html"/>
+    <id>https://daqzi.github.io/2017/json泛型的关联转换.html</id>
     <published>2017-07-31T12:29:38.000Z</published>
-    <updated>2018-08-13T07:55:03.110Z</updated>
+    <updated>2018-08-13T07:55:28.541Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="spring-boot��������"><a href="#spring-boot��������" class="headerlink" title="spring boot��������"></a>spring boot��������</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new SpringApplication(sources)</span><br></pre></td></tr></table></figure><p>���Ϲ��������������飺</p><ul><li>����SpringBoot�Ĺ����д���SpringApplication��ʵ����</li><li>���������ĳ�ʼ���������жϵ�ǰ�����ǲ���web������</li><li>��ȡ��Ӧ���࣬��Ŵ����sources�࣬</li><li>����org.springframework.context.ApplicationContextInitializer��org.springframework.context.ApplicationListener���͵Ķ���</li></ul><p>����run()������������������</p><ul><li>���ü�أ�StopWatch��Ҫ�Ǽ������̣�ͳ����ʱ�䣬���Ӧ���Ƿ��Ѿ������ֹͣ��</li><li>��spring�ļ����¼�</li><li>��������</li><li>���û�������</li><li>���������Ķ���</li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="JSON-对于泛型中关联转换"><a href="#JSON-对于泛型中关联转换" class="headerlink" title="JSON 对于泛型中关联转换"></a>JSON 对于泛型中关联转换</h4><ul><li>传递转换</li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSON.parseObject(response, new TypeReference&lt;Result&lt;CustResult&gt;&gt;()&#123;&#125;);</span><br></pre></td></tr></table></figure></li></ul><hr><h4 id="TypeReference"><a href="#TypeReference" class="headerlink" title="TypeReference"></a>TypeReference<t></t></h4><hr>]]></content>
     
     <summary type="html">
     
