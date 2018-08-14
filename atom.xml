@@ -149,4 +149,56 @@
     
   </entry>
   
+  <entry>
+    <title>json泛型的关联转换</title>
+    <link href="https://daqzi.github.io/2017/HashMap%E8%AF%A6%E8%A7%A3.html"/>
+    <id>https://daqzi.github.io/2017/HashMap详解.html</id>
+    <published>2017-07-31T12:29:38.000Z</published>
+    <updated>2018-08-14T04:34:41.544Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="JDk1-7中的hashmap"><a href="#JDk1-7中的hashmap" class="headerlink" title="JDk1.7中的hashmap"></a>JDk1.7中的hashmap</h3><ul><li>结构</li><li>put 方法</li><li>get 方法</li><li>hash冲突</li><li>hash碰撞</li></ul><h4 id="hashmap结构"><a href="#hashmap结构" class="headerlink" title="hashmap结构"></a>hashmap结构</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="java" scheme="https://daqzi.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://daqzi.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebService Soap 通过Http调用调用</title>
+    <link href="https://daqzi.github.io/2017/WebService%20Soap%20%E9%80%9A%E8%BF%87Http%E8%B0%83%E7%94%A8%E8%B0%83%E7%94%A8.html"/>
+    <id>https://daqzi.github.io/2017/WebService Soap 通过Http调用调用.html</id>
+    <published>2017-07-31T12:29:38.000Z</published>
+    <updated>2018-08-14T09:31:54.899Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="WebService-SOAP参数的生成以及http-调用流程"><a href="#WebService-SOAP参数的生成以及http-调用流程" class="headerlink" title="WebService SOAP参数的生成以及http 调用流程"></a>WebService SOAP参数的生成以及http 调用流程</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过java原生类创建soap请求，通过http的text/xml进行调用</span></span><br><span class="line"><span class="comment">//heanderStr 为soap头部的参数，bodyStr 为body参数</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">sendMessage</span><span class="params">(HashMap&lt;String,String&gt; headerStr, HashMap&lt;String, String&gt; bodyStr)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 创建SOAPMessage</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        SOAPMessage msg = MessageFactory.newInstance().createMessage();</span><br><span class="line">        msg.setProperty(SOAPMessage.CHARACTER_SET_ENCODING, <span class="string">"UTF-8"</span>);</span><br><span class="line"></span><br><span class="line">        SOAPEnvelope envelope = msg.getSOAPPart().getEnvelope();</span><br><span class="line">        <span class="comment">// 创建SOAPHeader</span></span><br><span class="line">        SOAPHeader header = envelope.getHeader();</span><br><span class="line">        <span class="keyword">if</span> (header == <span class="keyword">null</span>)</span><br><span class="line">        header = envelope.addHeader();</span><br><span class="line">        <span class="comment">//namespace 命名空间 ，节点名称</span></span><br><span class="line">        <span class="comment">//类似于这样的节点 &lt;DaySinnSoapHeader xmlns="http://tempuri.org/"&gt;</span></span><br><span class="line">        QName hname = <span class="keyword">new</span> QName(nameSpace, headerElementName,<span class="string">""</span>);</span><br><span class="line">        SOAPElement soapElement = header.addChildElement(hname);</span><br><span class="line">        <span class="comment">// 增加Header元素和值</span></span><br><span class="line">        <span class="comment">// 类似于这样的 &lt;apppsd&gt;MLTYbpm&lt;/apppsd&gt;</span></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : headerStr.entrySet()) &#123;</span><br><span class="line">            soapElement.addChildElement(<span class="keyword">new</span> QName(nameSpace, entry.getKey()))</span><br><span class="line">                    .setValue(entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 创建SOAPBody</span></span><br><span class="line">        SOAPBody body = envelope.getBody();</span><br><span class="line">        QName ename = <span class="keyword">new</span> QName(nameSpace, bodyElementName, <span class="string">""</span>);</span><br><span class="line">        SOAPBodyElement ele = body.addBodyElement(ename);</span><br><span class="line">        <span class="comment">// 增加Body元素和值</span></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : bodyStr.entrySet()) &#123;</span><br><span class="line">            ele.addChildElement(<span class="keyword">new</span> QName(nameSpace, entry.getKey()))</span><br><span class="line">                    .setValue(entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        OutputStream outputStream = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">        msg.writeTo(outputStream);</span><br><span class="line">        <span class="keyword">final</span> String request = outputStream.toString();</span><br><span class="line">        String response = HttpClientUtils.postXML(wsdlUrl, request);</span><br><span class="line">        <span class="comment">// 响应消息处理,将响应的消息转xml位子换为doc对象</span></span><br><span class="line">        Document doc = XmlUtil.getDocumentByXmlStr(response, <span class="string">"UTF-8"</span>);</span><br><span class="line">        <span class="comment">//reponsename为响应的接收的节点名称</span></span><br><span class="line">        String ret = doc.getElementsByTagName(responseName).item(<span class="number">0</span>)</span><br><span class="line">                .getTextContent();</span><br><span class="line">        outputStream.close();</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">throw</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="java" scheme="https://daqzi.github.io/categories/java/"/>
+    
+    
+      <category term="webservice" scheme="https://daqzi.github.io/tags/webservice/"/>
+    
+      <category term="http" scheme="https://daqzi.github.io/tags/http/"/>
+    
+  </entry>
+  
 </feed>
