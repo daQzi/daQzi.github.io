@@ -3,25 +3,44 @@
   
     
     <entry>
-      <title>hexo博客常用插件及教程</title>
-      <link href="/2018/hexo%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%8F%8A%E6%95%99%E7%A8%8B.html"/>
-      <url>/2018/hexo%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%8F%8A%E6%95%99%E7%A8%8B.html</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>为大家总结下hexo常用的插件与教程</p><p>合理的使用插件能够提高hexo的效率</p></blockquote><a id="more"></a><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">功能</th><th style="text-align:center">文档</th></tr></thead><tbody><tr><td style="text-align:center">npm install hexo-generator-index-pin-top –save<br>npm uninstall hexo-generator-index –save</td><td style="text-align:center">文章置顶插件</td><td style="text-align:center"><a href="https://blog.csdn.net/qwerty200696/article/details/79010629" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm i –save hexo-wordcount</td><td style="text-align:center">文章字数+阅读时长统计</td><td style="text-align:center"><a href="https://blog.csdn.net/ganzhilin520/article/details/79048036" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-baidu-url-submit –save</td><td style="text-align:center">百度链接主动推送</td><td style="text-align:center"><a href="https://hui-wang.info/2016/10/23/Hexo%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8F%90%E4%BA%A4%E9%93%BE%E6%8E%A5/" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-deployer-ftpsync –save</td><td style="text-align:center">hexo上传至FTP服务器</td><td style="text-align:center"><a href="https://hexo.io/zh-cn/docs/deployment.html#FTPSync" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-deployer-cos –save</td><td style="text-align:center">hexo上传至腾讯云COS</td><td style="text-align:center"><a href="https://github.com/sdlzhd/hexo-deployer-cos#user-content-options" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-deployer-aliyun –save</td><td style="text-align:center">hexo上传至阿里云</td><td style="text-align:center"><a href="https://github.com/yedaodao/hexo-deployer-aliyun" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install –save hexo-admin</td><td style="text-align:center">hexo管理插件</td><td style="text-align:center"><a href="https://github.com/jaredly/hexo-admin" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">hexo-blog-encrypt(请看文档)</td><td style="text-align:center">hexo文章加密码</td><td style="text-align:center"><a href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">卜算子ip计数统计</td><td style="text-align:center">IP计数统计</td><td style="text-align:center"><a href="https://www.jianshu.com/p/8a8f880f40c0" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install leancloud-storage –save</td><td style="text-align:center">Valine评论</td><td style="text-align:center"><a href="https://valine.js.org/quickstart.html#npm" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">Valine评论邮件通知</td><td style="text-align:center">Valine评论提醒</td><td style="text-align:center"><a href="http://www.zhaojun.im/hexo-valine-admin/" target="_blank" rel="noopener">点我</a></td></tr></tbody></table><blockquote><p>有需要的却找不到的，或者有优化方面的问题，都可以在下方留言，博主都会帮你解答</p></blockquote>]]></content>
+      <title>WebService Soap 通过Http调用调用</title>
+      <link href="/2018/WebService%20Soap%20%E9%80%9A%E8%BF%87Http%E8%B0%83%E7%94%A8%E8%B0%83%E7%94%A8.html"/>
+      <url>/2018/WebService%20Soap%20%E9%80%9A%E8%BF%87Http%E8%B0%83%E7%94%A8%E8%B0%83%E7%94%A8.html</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="WebService-SOAP参数的生成以及http-调用流程"><a href="#WebService-SOAP参数的生成以及http-调用流程" class="headerlink" title="WebService SOAP参数的生成以及http 调用流程"></a>WebService SOAP参数的生成以及http 调用流程</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过java原生类创建soap请求，通过http的text/xml进行调用</span></span><br><span class="line"><span class="comment">//heanderStr 为soap头部的参数，bodyStr 为body参数</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">sendMessage</span><span class="params">(HashMap&lt;String,String&gt; headerStr, HashMap&lt;String, String&gt; bodyStr)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 创建SOAPMessage</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        SOAPMessage msg = MessageFactory.newInstance().createMessage();</span><br><span class="line">        msg.setProperty(SOAPMessage.CHARACTER_SET_ENCODING, <span class="string">"UTF-8"</span>);</span><br><span class="line"></span><br><span class="line">        SOAPEnvelope envelope = msg.getSOAPPart().getEnvelope();</span><br><span class="line">        <span class="comment">// 创建SOAPHeader</span></span><br><span class="line">        SOAPHeader header = envelope.getHeader();</span><br><span class="line">        <span class="keyword">if</span> (header == <span class="keyword">null</span>)</span><br><span class="line">        header = envelope.addHeader();</span><br><span class="line">        <span class="comment">//namespace 命名空间 ，节点名称</span></span><br><span class="line">        <span class="comment">//类似于这样的节点 &lt;DaySinnSoapHeader xmlns="http://tempuri.org/"&gt;</span></span><br><span class="line">        QName hname = <span class="keyword">new</span> QName(nameSpace, headerElementName,<span class="string">""</span>);</span><br><span class="line">        SOAPElement soapElement = header.addChildElement(hname);</span><br><span class="line">        <span class="comment">// 增加Header元素和值</span></span><br><span class="line">        <span class="comment">// 类似于这样的 &lt;apppsd&gt;MLTYbpm&lt;/apppsd&gt;</span></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : headerStr.entrySet()) &#123;</span><br><span class="line">            soapElement.addChildElement(<span class="keyword">new</span> QName(nameSpace, entry.getKey()))</span><br><span class="line">                    .setValue(entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 创建SOAPBody</span></span><br><span class="line">        SOAPBody body = envelope.getBody();</span><br><span class="line">        QName ename = <span class="keyword">new</span> QName(nameSpace, bodyElementName, <span class="string">""</span>);</span><br><span class="line">        SOAPBodyElement ele = body.addBodyElement(ename);</span><br><span class="line">        <span class="comment">// 增加Body元素和值</span></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : bodyStr.entrySet()) &#123;</span><br><span class="line">            ele.addChildElement(<span class="keyword">new</span> QName(nameSpace, entry.getKey()))</span><br><span class="line">                    .setValue(entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        OutputStream outputStream = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">        msg.writeTo(outputStream);</span><br><span class="line">        <span class="keyword">final</span> String request = outputStream.toString();</span><br><span class="line">        String response = HttpClientUtils.postXML(wsdlUrl, request);</span><br><span class="line">        <span class="comment">// 响应消息处理,将响应的消息转xml位子换为doc对象</span></span><br><span class="line">        Document doc = XmlUtil.getDocumentByXmlStr(response, <span class="string">"UTF-8"</span>);</span><br><span class="line">        <span class="comment">//reponsename为响应的接收的节点名称</span></span><br><span class="line">        String ret = doc.getElementsByTagName(responseName).item(<span class="number">0</span>)</span><br><span class="line">                .getTextContent();</span><br><span class="line">        outputStream.close();</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">throw</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       <categories>
           
-          <category> hexo </category>
+          <category> java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo插件 </tag>
+            <tag> webservice </tag>
             
-            <tag> hexo博客 </tag>
+            <tag> http </tag>
             
-            <tag> hexo教程 </tag>
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>HashMap</title>
+      <link href="/2018/HashMap%E8%AF%A6%E8%A7%A3.html"/>
+      <url>/2018/HashMap%E8%AF%A6%E8%A7%A3.html</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="JDk1-7中的hashmap"><a href="#JDk1-7中的hashmap" class="headerlink" title="JDk1.7中的hashmap"></a>JDk1.7中的hashmap</h3><ul><li>结构</li><li>put 方法</li><li>get 方法</li><li>hash冲突</li><li>hash碰撞</li></ul><h4 id="hashmap结构"><a href="#hashmap结构" class="headerlink" title="hashmap结构"></a>hashmap结构</h4>]]></content>
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -74,27 +93,6 @@
     </entry>
     
     <entry>
-      <title>spring启动流程</title>
-      <link href="/2017/spring%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.html"/>
-      <url>/2017/spring%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.html</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="spring-boot的启动流程"><a href="#spring-boot的启动流程" class="headerlink" title="spring boot的启动流程"></a>spring boot的启动流程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new SpringApplication(sources)</span><br></pre></td></tr></table></figure><p>以上过程做了以下事情：</p><ul><li>在启动SpringBoot的过程中创建SpringApplication的实例，</li><li>并调用它的初始化方法来判断当前环境是不是web环境，</li><li>获取主应用类，存放传入的sources类，</li><li>加载org.springframework.context.ApplicationContextInitializer和org.springframework.context.ApplicationListener类型的对象。</li></ul><p>调用run()方法，做了以下事情</p><ul><li>启用监控：StopWatch主要是监控启动过程，统计启动时间，检测应用是否已经启动或者停止。</li><li>启动spring的监听事件</li><li>解析参数</li><li>配置环境变量</li><li>创建上下文对象</li></ul>]]></content>
-      
-      <categories>
-          
-          <category> spring </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> spring </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>json泛型的关联转换</title>
       <link href="/2017/json%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%85%B3%E8%81%94%E8%BD%AC%E6%8D%A2.html"/>
       <url>/2017/json%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%85%B3%E8%81%94%E8%BD%AC%E6%8D%A2.html</url>
@@ -116,44 +114,46 @@
     </entry>
     
     <entry>
-      <title>json泛型的关联转换</title>
-      <link href="/2017/HashMap%E8%AF%A6%E8%A7%A3.html"/>
-      <url>/2017/HashMap%E8%AF%A6%E8%A7%A3.html</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="JDk1-7中的hashmap"><a href="#JDk1-7中的hashmap" class="headerlink" title="JDk1.7中的hashmap"></a>JDk1.7中的hashmap</h3><ul><li>结构</li><li>put 方法</li><li>get 方法</li><li>hash冲突</li><li>hash碰撞</li></ul><h4 id="hashmap结构"><a href="#hashmap结构" class="headerlink" title="hashmap结构"></a>hashmap结构</h4>]]></content>
+      <title>spring启动流程</title>
+      <link href="/2017/spring%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.html"/>
+      <url>/2017/spring%E7%9A%84%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.html</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="spring-boot的启动流程"><a href="#spring-boot的启动流程" class="headerlink" title="spring boot的启动流程"></a>spring boot的启动流程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new SpringApplication(sources)</span><br></pre></td></tr></table></figure><p>以上过程做了以下事情：</p><ul><li>在启动SpringBoot的过程中创建SpringApplication的实例，</li><li>并调用它的初始化方法来判断当前环境是不是web环境，</li><li>获取主应用类，存放传入的sources类，</li><li>加载org.springframework.context.ApplicationContextInitializer和org.springframework.context.ApplicationListener类型的对象。</li></ul><p>调用run()方法，做了以下事情</p><ul><li>启用监控：StopWatch主要是监控启动过程，统计启动时间，检测应用是否已经启动或者停止。</li><li>启动spring的监听事件</li><li>解析参数</li><li>配置环境变量</li><li>创建上下文对象</li></ul>]]></content>
       
       <categories>
           
-          <category> java </category>
+          <category> spring </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
+            <tag> spring </tag>
             
         </tags>
       
     </entry>
     
     <entry>
-      <title>WebService Soap 通过Http调用调用</title>
-      <link href="/2017/WebService%20Soap%20%E9%80%9A%E8%BF%87Http%E8%B0%83%E7%94%A8%E8%B0%83%E7%94%A8.html"/>
-      <url>/2017/WebService%20Soap%20%E9%80%9A%E8%BF%87Http%E8%B0%83%E7%94%A8%E8%B0%83%E7%94%A8.html</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="WebService-SOAP参数的生成以及http-调用流程"><a href="#WebService-SOAP参数的生成以及http-调用流程" class="headerlink" title="WebService SOAP参数的生成以及http 调用流程"></a>WebService SOAP参数的生成以及http 调用流程</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过java原生类创建soap请求，通过http的text/xml进行调用</span></span><br><span class="line"><span class="comment">//heanderStr 为soap头部的参数，bodyStr 为body参数</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">sendMessage</span><span class="params">(HashMap&lt;String,String&gt; headerStr, HashMap&lt;String, String&gt; bodyStr)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 创建SOAPMessage</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        SOAPMessage msg = MessageFactory.newInstance().createMessage();</span><br><span class="line">        msg.setProperty(SOAPMessage.CHARACTER_SET_ENCODING, <span class="string">"UTF-8"</span>);</span><br><span class="line"></span><br><span class="line">        SOAPEnvelope envelope = msg.getSOAPPart().getEnvelope();</span><br><span class="line">        <span class="comment">// 创建SOAPHeader</span></span><br><span class="line">        SOAPHeader header = envelope.getHeader();</span><br><span class="line">        <span class="keyword">if</span> (header == <span class="keyword">null</span>)</span><br><span class="line">        header = envelope.addHeader();</span><br><span class="line">        <span class="comment">//namespace 命名空间 ，节点名称</span></span><br><span class="line">        <span class="comment">//类似于这样的节点 &lt;DaySinnSoapHeader xmlns="http://tempuri.org/"&gt;</span></span><br><span class="line">        QName hname = <span class="keyword">new</span> QName(nameSpace, headerElementName,<span class="string">""</span>);</span><br><span class="line">        SOAPElement soapElement = header.addChildElement(hname);</span><br><span class="line">        <span class="comment">// 增加Header元素和值</span></span><br><span class="line">        <span class="comment">// 类似于这样的 &lt;apppsd&gt;MLTYbpm&lt;/apppsd&gt;</span></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : headerStr.entrySet()) &#123;</span><br><span class="line">            soapElement.addChildElement(<span class="keyword">new</span> QName(nameSpace, entry.getKey()))</span><br><span class="line">                    .setValue(entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 创建SOAPBody</span></span><br><span class="line">        SOAPBody body = envelope.getBody();</span><br><span class="line">        QName ename = <span class="keyword">new</span> QName(nameSpace, bodyElementName, <span class="string">""</span>);</span><br><span class="line">        SOAPBodyElement ele = body.addBodyElement(ename);</span><br><span class="line">        <span class="comment">// 增加Body元素和值</span></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : bodyStr.entrySet()) &#123;</span><br><span class="line">            ele.addChildElement(<span class="keyword">new</span> QName(nameSpace, entry.getKey()))</span><br><span class="line">                    .setValue(entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        OutputStream outputStream = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">        msg.writeTo(outputStream);</span><br><span class="line">        <span class="keyword">final</span> String request = outputStream.toString();</span><br><span class="line">        String response = HttpClientUtils.postXML(wsdlUrl, request);</span><br><span class="line">        <span class="comment">// 响应消息处理,将响应的消息转xml位子换为doc对象</span></span><br><span class="line">        Document doc = XmlUtil.getDocumentByXmlStr(response, <span class="string">"UTF-8"</span>);</span><br><span class="line">        <span class="comment">//reponsename为响应的接收的节点名称</span></span><br><span class="line">        String ret = doc.getElementsByTagName(responseName).item(<span class="number">0</span>)</span><br><span class="line">                .getTextContent();</span><br><span class="line">        outputStream.close();</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">throw</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <title>hexo博客常用插件及教程</title>
+      <link href="/2017/hexo%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%8F%8A%E6%95%99%E7%A8%8B.html"/>
+      <url>/2017/hexo%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%8F%8A%E6%95%99%E7%A8%8B.html</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>为大家总结下hexo常用的插件与教程</p><p>合理的使用插件能够提高hexo的效率</p></blockquote><a id="more"></a><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">功能</th><th style="text-align:center">文档</th></tr></thead><tbody><tr><td style="text-align:center">npm install hexo-generator-index-pin-top –save<br>npm uninstall hexo-generator-index –save</td><td style="text-align:center">文章置顶插件</td><td style="text-align:center"><a href="https://blog.csdn.net/qwerty200696/article/details/79010629" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm i –save hexo-wordcount</td><td style="text-align:center">文章字数+阅读时长统计</td><td style="text-align:center"><a href="https://blog.csdn.net/ganzhilin520/article/details/79048036" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-baidu-url-submit –save</td><td style="text-align:center">百度链接主动推送</td><td style="text-align:center"><a href="https://hui-wang.info/2016/10/23/Hexo%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8F%90%E4%BA%A4%E9%93%BE%E6%8E%A5/" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-deployer-ftpsync –save</td><td style="text-align:center">hexo上传至FTP服务器</td><td style="text-align:center"><a href="https://hexo.io/zh-cn/docs/deployment.html#FTPSync" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-deployer-cos –save</td><td style="text-align:center">hexo上传至腾讯云COS</td><td style="text-align:center"><a href="https://github.com/sdlzhd/hexo-deployer-cos#user-content-options" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install hexo-deployer-aliyun –save</td><td style="text-align:center">hexo上传至阿里云</td><td style="text-align:center"><a href="https://github.com/yedaodao/hexo-deployer-aliyun" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install –save hexo-admin</td><td style="text-align:center">hexo管理插件</td><td style="text-align:center"><a href="https://github.com/jaredly/hexo-admin" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">hexo-blog-encrypt(请看文档)</td><td style="text-align:center">hexo文章加密码</td><td style="text-align:center"><a href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">卜算子ip计数统计</td><td style="text-align:center">IP计数统计</td><td style="text-align:center"><a href="https://www.jianshu.com/p/8a8f880f40c0" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">npm install leancloud-storage –save</td><td style="text-align:center">Valine评论</td><td style="text-align:center"><a href="https://valine.js.org/quickstart.html#npm" target="_blank" rel="noopener">点我</a></td></tr><tr><td style="text-align:center">Valine评论邮件通知</td><td style="text-align:center">Valine评论提醒</td><td style="text-align:center"><a href="http://www.zhaojun.im/hexo-valine-admin/" target="_blank" rel="noopener">点我</a></td></tr></tbody></table><blockquote><p>有需要的却找不到的，或者有优化方面的问题，都可以在下方留言，博主都会帮你解答</p></blockquote>]]></content>
       
       <categories>
           
-          <category> java </category>
+          <category> hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> webservice </tag>
+            <tag> hexo插件 </tag>
             
-            <tag> http </tag>
+            <tag> hexo博客 </tag>
+            
+            <tag> hexo教程 </tag>
             
         </tags>
       
